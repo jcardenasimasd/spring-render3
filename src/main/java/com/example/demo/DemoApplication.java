@@ -25,12 +25,6 @@ public class DemoApplication {
 		public String hello() {
 			return "Hello render";
 		}
-
-		@PostMapping("/Weebhook")
-		public ResponseEntity<String> handleWebhook(@RequestBody Map<String, Object> event) {
-			System.err.println(event);
-			return ResponseEntity.ok(event.toString());
-		}
 	}
 
 }
